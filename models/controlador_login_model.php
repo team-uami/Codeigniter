@@ -30,8 +30,4 @@ class Controlador_login_model extends CI_Model{
         
 
     }
-
-
-
-
 ?>

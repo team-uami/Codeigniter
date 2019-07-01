@@ -75,7 +75,7 @@ li.dropdown {
     <a href="javascript:void(0)" class="dropbtn">Preguntas</a>
     <div class="dropdown-content">
       
-      <a href="http://localhost/Codeigniter/index.php/controlador_adminP/nuevo"> Crear Pregunta</a>
+      <a href="http://localhost/CodeIgniter/index.php/controlador_preguntas"> Crear Pregunta</a>
       <a href="http://localhost/Codeigniter/index.php/controlador_adminP/eliminar"> Eliminar Pregunta</a>
       <a href="http://localhost/Codeigniter/index.php/controlador_adminarP/modificar"> Modificar Pregunta</a>
       
@@ -95,7 +95,7 @@ li.dropdown {
     <a href="javascript:void(0)" class="dropbtn">Respuestas</a>
     <div class="dropdown-content">
       
-      <a href="http://localhost/Codeigniter/index.php/controlador_adminR/nuevo"> Crear Respuesta</a>
+      <a href="http://localhost/CodeIgniter/index.php/controlador_respuestas"> Crear Respuesta</a>
       <a href="http://localhost/Codeigniter/index.php/controlador_adminR/modificar"> Modificar Respuesta</a>
       <a href="http://localhost/Codeigniter/index.php/controlador_adminR/eliminar"> Eliminar Respuesta</a>
       
