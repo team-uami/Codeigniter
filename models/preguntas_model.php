@@ -7,10 +7,8 @@ class Preguntas_model extends CI_Model {
 		$this-> load ->database();
 	}
 	
-	function crearPregunta($data){
-		$this-> db -> insert ('pregunta',array('idPregunta'=> $data['id'], 
-                                                        'nombrePregunta'=> $data['pregunta'],
-                                                        'descripcionPregunta'=> $data['descripcion'] ));
+	function crearPregunta($data){  
+            $query=$this->db->query("INSERT INTO `pregunta` (`idPregunta`, `nombrePregunta`, `descripcionPregunta`) VALUES (NULL, '".$data."', 'asdfg');");
 	}
 }
 ?>

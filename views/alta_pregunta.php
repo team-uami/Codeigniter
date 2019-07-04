@@ -1,4 +1,4 @@
-<?= form_open("/controlador_preguntas/recibirdatos") ?>
+
 <head>
     <style>
         div.relative {
@@ -33,37 +33,18 @@
     </style>
 </head>
 
-<?php
-  $id = array(
-    'name'=> 'id',
-    'placeholder' => 'Ingrese id'
-  );
 
-  $nombrePregunta = array(
-    'name'=> 'nombrePregunta',
-    'placeholder' => 'Ingrese el nombre de la Pregunta'
-  );
+<form method="post">
   
-  $descripcionPregunta = array(
-    'name'=> 'descripcionPregunta',
-    'placeholder' => 'Ingrese la descripcion de la Pregunta'
-  );
-?>
-    
-        <h1>
-            <?= form_label('ID','id') ?>
-            <?= form_input($id) ?>
-            <br><br>
-            <?= form_label('Nombre Pregunta','nombrePregunta') ?>
-            <?= form_input($nombrePregunta) ?>
-            <br><br>
-            <?= form_label('Descripcion Pregunta','descripcionPregunta') ?>
-            <?= form_input($descripcionPregunta) ?>
-            <br><br>
-            </h1>
-          <button class="button">Aceptar</button>
+  <div class="container">
+    <label for="pregunta"><b>pregunta</b></label>
+    <input type="text" placeholder="Ingrese Pregunta" name="pregunta" required>
 
+    <button type="submit" name="Aceptar" value="Aceptar">Aceptar</button>
+   
+  </div>
 
-<?= form_close() ?>
+</form>
+
 </body>
 </html>

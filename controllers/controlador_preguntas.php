@@ -14,12 +14,8 @@ class Controlador_preguntas extends CI_Controller {
 	}
 
 	function recibirdatos(){
-		$data = array (
-			'id' => $this -> input -> post('id'),
-			'pregunta' => $this -> input -> post('nombrePregunta'),
-                        'descripcion' => $this -> input -> post('descripcionPregunta')
-		);
-		$this-> preguntas_model-> crearPregunta( $data );
+        $pregunta = $this->input->post('pregunta');
+		$this-> preguntas_model-> crearPregunta( $pregunta );
 		$this-> load->view('header_administrador');
 		$this-> load->view('alta_pregunta');
 	

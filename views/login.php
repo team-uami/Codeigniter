@@ -66,7 +66,6 @@ span.psw {
 <body>
 
 
-
 <form method="post">
   <div class="imgcontainer">
     <img src="../../images/avatar.png" alt="Avatar" class="avatar">
