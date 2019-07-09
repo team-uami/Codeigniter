@@ -13,7 +13,7 @@
     <button type="submit" name="AgregarCuestionario" value="AgregarCuestionario" class="btn btn-primary">AgregarCuestionario </button>
    
   </div>
-    <div class="container">
+  <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
                     <table class="table table-striped table-hover">
@@ -21,8 +21,8 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>NameSpace1</th>
-                                <th>NameSpace2</th>
+                                <th>Cuestionarios</th>
+                                <th>Espacio libre</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,10 +30,13 @@
                             <tr>
                                 <td><?php echo ($i+1); ?></td>
                                 <td><?php echo $listacuest[$i] -> nombreCuestionario; ?></td>   
-                                
+                                <td>
+                                    <button type="modificar" name="ModificarCuestionario" value="ModificarCuestioanrio" class="btn btn-primary">Modificar</button>
+                                    <button type="delete" name="BorrarCuestionario" value="BorrarCuestioanrio" class="btn btn-primary">Borrar</button>
+                                    
+                                </td>
                             </tr>
                             <?php } ?>
-                            
                             
                         </tbody>
                         
@@ -41,7 +44,7 @@
                     
                 </div>
             </div>
-        </div>
+    </div>
   
 </form>
 

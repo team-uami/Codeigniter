@@ -39,6 +39,18 @@
             $this->load->view('header_administrador');
             $this->load->view('alta_cuestionario',$data);
             
+            if($this->input->post('AgregarCuestionario')){
+                $nombreCue = $this -> input -> post('nombreCuestionario');
+                $this -> cuestionario_model -> crearCuestionario($nombreCue);
+                
+            }
+            if($this->input->post('ModificarCuestionario')){
+                
+            }
+            if($this->input->post('BorrarCuestionario')){
+                
+            }
+                  
         }
     }
 
