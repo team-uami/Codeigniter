@@ -8,10 +8,15 @@
         }
         
         function crearCuestionario($nombreCue){
-            $query = "INSERT INTO cuestionario (idCuestionario, nombreCuestionario) VALUES (NULL,'$nombreCue')";
+            $query = "INSERT INTO cuestionario (nombreCuestionario) VALUES ('$nombreCue')";
             $this -> db -> query($query);
         }
-        
+        function obtenerCuestionario(){
+            $sql = 'select nombreCuestionario from cuestionario';
+            $query = $this->db->query($sql);
+            $result = $query->result();
+            return $result;
+        }
     }
 
 ?>

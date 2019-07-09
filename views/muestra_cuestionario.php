@@ -1,19 +1,14 @@
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-</head>
-<body>
-    
-<form method="post">
-    
-  <div class="container">
-    <label for="nombreCuestionario"><b>Agregar Cuestionario</b></label>
-    <input type="text" placeholder="Nombre de cuestionario." name="nombreCuestionario" required>
-    
-    <button type="submit" name="AgregarCuestionario" value="AgregarCuestionario" class="btn btn-primary">AgregarCuestionario </button>
-   
-  </div>
-    <div class="container">
+
+<html>  
+    <head>
+        <title> Prueba de muestra</title>
+        <meta name="viewport" content ="width=devide-width, initial-scale=1.0">
+        <!--Link in the bootsrtap css file-->
+        <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.css"); ?>">
+        
+    </head>
+    <body>
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
                     <table class="table table-striped table-hover">
@@ -42,8 +37,6 @@
                 </div>
             </div>
         </div>
-  
-</form>
+    </body>
 
-    
-</body>
+</html>

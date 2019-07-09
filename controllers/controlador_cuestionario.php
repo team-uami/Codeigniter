@@ -5,6 +5,8 @@
         function __construct(){
             parent:: __construct();
             $this -> load -> helper('form');
+            $this -> load -> helper('url');
+            $this -> load -> database();
             $this -> load -> model('cuestionario_model');
         }//Let's create the model.
         
@@ -25,6 +27,19 @@
             
         //Need to place the if condition in
         }//End of recibirdatos.
+        function mostrardatos(){
+            
+            $this -> load -> helper('form');
+            //Load in the model first
+            $this -> load -> model('cuestionario_model');
+            //Call the function in the model to get data
+            $resultados = $this -> cuestionario_model -> obtenerCuestionario();
+            $data['listacuest'] = $resultados;
+            //Load in the view
+            $this->load->view('header_administrador');
+            $this->load->view('alta_cuestionario',$data);
+            
+        }
     }
 
 
