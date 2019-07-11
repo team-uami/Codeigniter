@@ -17,6 +17,28 @@
             $result = $query->result();
             return $result;
         }
+        function obtenerPreguntas(){
+            $sql = 'select nombrePregunta from pregunta';
+            $query = $this->db->query($sql);
+            $result = $query -> result();
+            return $result;
+        }
+        function obtenerDescripcion(){
+            $sql = 'select descripcionPregunta from pregunta';
+            $query = $this->db->query($sql);
+            $result = $query -> result();
+            return $result;
+        }
+        function getPreguntas(){
+            $sql = 'select nombrePregunta,descripcionPregunta from pregunta';
+            $query = $this -> db -> query($sql);
+            $result = $query -> result();
+            return $result;
+        }
+        function crearPregunta($nombrePregunta, $descripcionPregunta){
+            $query = "INSERT INTO pregunta (nombrePregunta, descripcionPregunta) VALUES ('$nombrePregunta','$descripcionPregunta')";
+            $this -> db -> query($query);
+        }
     }
 
 ?>

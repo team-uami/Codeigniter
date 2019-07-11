@@ -52,6 +52,32 @@
             }
                   
         }
+        function pruebaPreguntas(){
+            $this -> load -> helper('form');
+            //Load in the model first
+            $this -> load -> model('cuestionario_model');
+            //Call the function in the model to get data
+            $pregresults = $this->cuestionario_model -> getPreguntas();
+            $data['preglist'] = $pregresults;
+            //Load in the view
+            $this->load->view('header_administrador');
+            $this->load->view('muestra_preguntas',$data);
+            
+            
+            if($this->input->post('AgregarPregunta')){
+                $nombrePregunta = $this -> input -> post('nombrePregunta');
+                $descripcionPregunta = $this -> input -> post('descripcionPregunta');
+                $this -> cuestionario_model -> crearPregunta($nombrePregunta, $descripcionPregunta);
+
+                
+            }/*
+            if($this->input->post('ModificarCuestionario')){
+                
+            }
+            if($this->input->post('BorrarCuestionario')){
+                
+            }*/
+        }
     }
 
 

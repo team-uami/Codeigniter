@@ -21,7 +21,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php for ($i = 0; $i < count($listacuest); ++$i){?>
+                            <?php for ($i = 0; $i < count($listacuest) && $i < count($listadescripciones); ++$i){?>
                             <tr>
                                 <td><?php echo ($i+1); ?></td>
                                 <td><?php echo $listacuest[$i] -> nombreCuestionario; ?></td>   

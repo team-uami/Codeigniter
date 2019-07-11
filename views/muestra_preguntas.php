@@ -5,14 +5,13 @@
 <body>
     
 <form method="post">
-    
+
   <div class="container">
-    <label for="nombreCuestionario"><b>Agregar Cuestionario</b></label>
-    <input type="text" placeholder="Nombre de cuestionario." name="nombreCuestionario" required>
+    <label for="nombrePregunta"><b>Agregar Preguntas</b></label>
+    <input type="text" placeholder="La pregunta." name="nombrePregunta" required>
+    <input type="text" placeholder="Descripcion." name="descripcionPregunta" required>
+    <button type="submit" name="AgregarPregunta" value="AgregarPregunta" class="btn btn-primary"> ® </button>
     
-    <button type="submit" name="AgregarCuestionario" value="AgregarCuestionario" class="btn btn-primary">AgregarCuestionario </button>
-   
-  </div>
   <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
@@ -21,19 +20,23 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Cuestionarios</th>
+                                <th>Preguntas</th>
+                                <th>Descripcion</th>
                                 <th>Opciones</th>
+                                
                             </tr>
                         </thead>
+
                         <tbody>
-                            <?php for ($i = 0; $i < count($listacuest); ++$i){?>
+                            <?php for ($i = 0; $i < count($preglist); ++$i){?>
                             <tr>
                                 <td><?php echo ($i+1); ?></td>
-                                <td><?php echo $listacuest[$i] -> nombreCuestionario; ?></td>   
+                                <td><?php echo $preglist[$i] -> nombrePregunta; ?></td> 
+                                <td><?php echo $preglist[$i] -> descripcionPregunta; ?></td>
                                 <td>
                                     <button type="nameSwitch" name="CambiarNombre" value="CambiarNombre" class="btn btn-primary">Cambiar Nombre</button>
                                     <button type="delete" name="EliminarCuestionario" value="EliminarCuestioanrio" class="btn btn-primary">Eliminar</button>
-                                    <button type="questions" name="PreguntasCuestionario" value="PreguntasCuestioanrio" class="btn btn-primary">Preguntas</button>
+                                    <
                                     
                                 </td>
                             </tr>
