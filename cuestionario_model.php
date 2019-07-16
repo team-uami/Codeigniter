@@ -23,6 +23,12 @@
             $result = $query->result();
             return $result;
         }
+        function get_cuestionario()
+        {
+            $this -> db -> from ('cuestionario');
+            $query = $this -> db -> get();
+            return $query -> result();
+        }
         /*Cosas para controlador de preguntas.
         function obtenerPreguntas(){
             $sql = 'select nombrePregunta from pregunta';

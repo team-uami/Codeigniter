@@ -40,6 +40,13 @@
                 $this -> cuestionario_model -> crearCuestionario($nombreCue);   
             } 
         }
+        function index(){
+            $this->load->view('header_administrador');
+            $data['listacuest'] = $this -> cuestionario_model -> obtenerCuestionario();
+            $data['listaidcuest'] = $this-> cuestionario_model -> obtenerIdCuestionario();
+            $this -> load -> view('muestra_cuestionario', $data);
+           
+        }
         function opciones(){
             
             $this -> load -> helper('form');
@@ -64,11 +71,6 @@
             if($this->input->post('PreguntasCuestionario')){
                 
             }
-        function eliminarCuestionario($id){
-                $this->db->where('idCuestionario',$id);
-                $this->db->delete('cuestionario');
-                redirect('controlador_cuestionario/opciones');
-        }     
         }
         
         
@@ -76,9 +78,19 @@
         
         
         
+        function eliminar_cuestionario($id){
+                $this->db->where('idCuestionario',$id);
+                $this->db->delete('cuestionario');
+                redirect('controlador_cuestionario/index');
+        }  
         
         
         
+        
+        
+        
+        
+        /*
         function pruebaPreguntas(){
             $this -> load -> helper('form');
             //Load in the model first
@@ -105,7 +117,7 @@
                 
             }*/
         }
-    }
+    
 
 
 

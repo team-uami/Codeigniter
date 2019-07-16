@@ -22,14 +22,8 @@
                             <tr>
                                 <td><?php echo ($i+1); ?></td>
                                 <td><a href = '/CodeIgniter/Index.php/controlador_AdminE?id=<?php echo $listaidcuest[$i] -> idCuestionario; ?>'><?php echo $listacuest[$i] -> nombreCuestionario; ?> </a></td>
+                                <td><a href="<?php echo base_url() . "index.php/controlador_cuestionario/eliminar_cuestionario/" . $listaidcuest[$i]->idCuestionario; ?>">Borrar</a></td>
                                 
-                                <td>
-                                
-                                    <button type="nameSwitch" name="CambiarNombre" value="CambiarNombre" class="btn btn-primary">Cambiar Nombre</button>
-                                    <!--<button type="delete" name="EliminarCuestionario" value="EliminarCuestioanrio" class="btn btn-primary">Eliminar</button>-->
-                                    <a href="<?php echo base_url() . "index.php/controlador_cuestionario/eliminarCuestionario/" . $listaidcuest[$i]->idCuestionario; ?>">Borrar</a>
-                                    
-                                </td>
                                 
                             </tr>
                             <?php } ?>
